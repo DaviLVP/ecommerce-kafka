@@ -4,9 +4,12 @@ import com.davi.bytecommerce.dto.ItemPedidoDTO;
 import com.davi.bytecommerce.dto.PedidoDTO;
 import com.davi.bytecommerce.exception.BussinessException;
 import com.davi.bytecommerce.exception.ResourceNotFoundException;
+import com.davi.bytecommerce.integration.PedidoProducer;
+import com.davi.bytecommerce.model.Cliente;
 import com.davi.bytecommerce.model.Estoque;
 import com.davi.bytecommerce.model.ItemPedido;
 import com.davi.bytecommerce.model.Pedido;
+import com.davi.bytecommerce.repository.ClienteRepository;
 import com.davi.bytecommerce.repository.EstoqueRepository;
 import com.davi.bytecommerce.repository.PedidoRepository;
 import lombok.RequiredArgsConstructor;
@@ -24,9 +27,14 @@ public class PedidoService {
     private final PedidoRepository pedidoRepository;
     private final EstoqueRepository estoqueRepository;
     private final ModelMapper modelMapper;
+    private final ClienteRepository clienteRepository;
+    private final PedidoProducer pedidoProducer;
 
-    public PedidoDTO criarPedido(List<ItemPedidoDTO> itensPedidosRequest) {
+    public PedidoDTO criarPedido(Long clienteId, List<ItemPedidoDTO> itensPedidosRequest) {
+        Cliente cliente = clienteRepository.findById(clienteId).orElseThrow(() ->
+            new ResourceNotFoundException(String.format("Cliente id: %d não encontrado!", clienteId)));
         Pedido pedido = new Pedido();
+        pedido.setCliente(cliente);
         pedido.setDataPedido(LocalDate.now());
 
         for (ItemPedidoDTO item : itensPedidosRequest) {
@@ -60,10 +68,12 @@ public class PedidoService {
         PedidoDTO pedidoDTO = new PedidoDTO();
         pedidoDTO.setId(pedido.getId());
         pedidoDTO.setDataPedido(pedido.getDataPedido());
+        pedidoDTO.setClienteId(pedido.getCliente().getId());
         pedidoDTO.setValorTotalPedido(pedido.getValorTotalPedido());
         pedidoDTO.setItensPedido(pedido.getItensPedido().stream().map(item ->
                 modelMapper.map(item, ItemPedidoDTO.class)).toList());
 
+        pedidoProducer.sendMessage(pedidoDTO);
         return pedidoDTO;
     }
 }

@@ -8,7 +8,6 @@ import lombok.Setter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 @Getter
@@ -17,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 public class PedidoDTO {
     private Long id;
+    private Long clienteId;
     private LocalDate dataPedido;
     private List<ItemPedidoDTO> itensPedido = new ArrayList<>();
     private BigDecimal valorTotalPedido;

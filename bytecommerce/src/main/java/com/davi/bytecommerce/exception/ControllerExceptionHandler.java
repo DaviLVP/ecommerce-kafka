@@ -22,13 +22,27 @@ public class ControllerExceptionHandler {
 
         return ResponseEntity.status(status).body(err);
     }
+
     @ExceptionHandler(BussinessException.class)
-    public ResponseEntity<StandardError> BusinessException(BussinessException e, HttpServletRequest request) {
+    public ResponseEntity<StandardError> businessException(BussinessException e, HttpServletRequest request) {
         HttpStatus status = HttpStatus.NOT_FOUND;
         StandardError err = new StandardError();
         err.setTimestamp(Instant.now());
         err.setStatus(status.value());
         err.setError("BusinessException");
+        err.setMessage(e.getMessage());
+        err.setPath(request.getRequestURI());
+
+        return ResponseEntity.status(status).body(err);
+    }
+
+    @ExceptionHandler(JsonConverterException.class)
+    public ResponseEntity<StandardError>badRequest(JsonConverterException e, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.NOT_FOUND;
+        StandardError err = new StandardError();
+        err.setTimestamp(Instant.now());
+        err.setStatus(status.value());
+        err.setError("Bad Request");
         err.setMessage(e.getMessage());
         err.setPath(request.getRequestURI());
 
