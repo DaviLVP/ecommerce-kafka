@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6097a9f1-88ed-4337-867c-201cd2f84230" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/config/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/config/ObjectMapperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/exception/JsonConverterException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/integration/PedidoProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bytecommerce/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bytecommerce/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/controller/PedidoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/controller/PedidoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/dto/PedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/dto/PedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/exception/ControllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/exception/ControllerExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/model/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/model/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/service/PedidoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bytecommerce/src/main/java/com/davi/bytecommerce/service/PedidoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bytecommerce/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bytecommerce/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2j1sJ1FpTY5l3Fa63h8fv6ixdnd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/projetos/ecommerce-kafka"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6097a9f1-88ed-4337-867c-201cd2f84230" name="Changes" comment="" />
+      <created>1720565841618</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720565841618</updated>
+    </task>
+    <servers />
+  </component>
+</project>
