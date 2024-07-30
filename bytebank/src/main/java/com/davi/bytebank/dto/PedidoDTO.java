@@ -1,6 +1,5 @@
-package com.davi.bytecommerce.dto;
+package com.davi.bytebank.dto;
 
-import com.davi.bytecommerce.model.StatusPedido;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,9 +17,9 @@ import java.util.List;
 public class PedidoDTO {
     private Long id;
     private Long clienteId;
+    private String clienteCpf;
     private LocalDate dataPedido;
+    private StatusPedido status;
     private List<ItemPedidoDTO> itensPedido = new ArrayList<>();
     private BigDecimal valorTotalPedido;
-    private String clienteCpf;
-    private StatusPedido status;
 }

@@ -21,6 +21,7 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate dataPedido;
+    private StatusPedido status;
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;

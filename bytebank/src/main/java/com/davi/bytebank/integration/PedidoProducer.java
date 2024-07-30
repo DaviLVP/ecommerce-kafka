@@ -1,9 +1,9 @@
-package com.davi.bytecommerce.integration;
+package com.davi.bytebank.integration;
 
 
-import com.davi.bytecommerce.dto.PedidoDTO;
-import com.davi.bytecommerce.exception.JsonConverterException;
-import com.davi.bytecommerce.model.Pedido;
+
+import com.davi.bytebank.dto.PedidoDTO;
+import com.davi.bytebank.exception.JsonConverterException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class PedidoProducer {
 
-    private static final String TOPIC = "analise-pedidos-entrada-v1";
+    private static final String TOPIC = "analise-pedidos-saida-v1";
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final ObjectMapper objectMapper;
 
